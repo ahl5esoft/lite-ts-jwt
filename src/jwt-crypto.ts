@@ -15,7 +15,7 @@ export class JwtCrypto extends CryptoBase {
 
     public async decrypt(cipherText: string) {
         const data = jwt.decode(cipherText);
-        return data ? JSON.stringify(data) : '';
+        return data?.toString();
     }
 
     public async encrypt(plaintext: string) {
